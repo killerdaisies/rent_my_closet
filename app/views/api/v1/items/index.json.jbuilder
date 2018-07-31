@@ -1,5 +1,5 @@
 json.items do
   json.array! @items do |item|
-    json.extract! item, :name, :description, :price
+    json.extract! item, :id, :name, :description, :price
   end
 end
