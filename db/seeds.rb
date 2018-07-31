@@ -10,7 +10,6 @@ Booking.delete_all
 Item.delete_all
 User.delete_all
 
-
 2.times do
   User.create(wechat_name: Faker::DumbAndDumber.actor, wechat_id: Faker::IDNumber.invalid, description: Faker::DumbAndDumber.quote)
 end
