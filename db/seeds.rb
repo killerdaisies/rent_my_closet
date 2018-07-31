@@ -25,4 +25,3 @@ User.all.each do |u|
     Booking.create(date: Date.today, user_id: u.id, item_id: Item.all.sample.id)
   end
 end
-
