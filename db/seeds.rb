@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 Booking.delete_all
 Item.delete_all
 User.delete_all
@@ -19,9 +20,9 @@ User.all.each do |user|
   end
 end
 
-
 User.all.each do |u|
   2.times do
     Booking.create(date: Date.today, user_id: u.id, item_id: Item.all.sample.id)
   end
 end
+
