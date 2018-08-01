@@ -11,12 +11,12 @@ Item.delete_all
 User.delete_all
 
 2.times do
-  User.create(wechat_name: Faker::DumbAndDumber.actor, wechat_id: Faker::IDNumber.invalid, description: Faker::DumbAndDumber.quote)
+  User.create(wechat_name: Faker::DumbAndDumber.actor, open_id: Faker::IDNumber.invalid, description: Faker::DumbAndDumber.quote)
 end
 
 User.all.each do |user|
   2.times do
-    Item.create(user: user, name: Faker::DumbAndDumber.actor, description: Faker::DumbAndDumber.quote, availability: [false,true].sample ,price: Faker::Number.number(3), sizing: Faker::Number.between(1, 10))
+    Item.create(user: user, name: Faker::DumbAndDumber.actor, description: Faker::DumbAndDumber.quote, availability: [false,true].sample ,price: Faker::Number.number(3), sizing: Faker::Number.between(1, 10), category: ["maxi", "formal", "cocktail", "summer", "casual", "social"].sample)
   end
 end
 

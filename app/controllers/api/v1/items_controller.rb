@@ -53,7 +53,7 @@ class Api::V1::ItemsController < Api::V1::BaseController
   end
 
   def item_params
-    params.require(:item).permit(:name, :description, :price)
+    params.require(:item).permit(:name, :description, :price, :sizing, :category, :availability)
   end
 
 
