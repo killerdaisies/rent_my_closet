@@ -1,5 +1,5 @@
 json.users do
   json.array! @users do |user|
-    json.extract! user, :open_id, :wechat_name, :description
+    json.extract! user, :id, :open_id, :wechat_name, :description
   end
 end
