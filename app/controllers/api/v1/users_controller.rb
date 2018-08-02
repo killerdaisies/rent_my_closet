@@ -43,7 +43,7 @@ class Api::V1::UsersController < Api::V1::BaseController
   end
 
   def user_params
-    params.require(:user).permit(:open_id, :wechat_name, :description)
+    params.require(:user).permit(:open_id, :wechat_name, :description, :avatarUrl)
   end
 
 
