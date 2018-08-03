@@ -28,7 +28,9 @@ class Api::V1::UsersController < Api::V1::BaseController
     if @user.save
       render :show, status: :created
     else
-      render_error
+      # render_error
+      render json: { errors: @user.errors.full_messages },
+        status: :unprocessable_entity
     end
   end
 
