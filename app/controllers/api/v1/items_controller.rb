@@ -5,7 +5,7 @@ class Api::V1::ItemsController < Api::V1::BaseController
     if params[:query].present?
       sql_query = " \
         items.name @@ :query \
-        OR items.description @@ :query \
+        OR items.category @@ :query \
         OR users.wechat_name @@ :query \
       "
       @items = Item.joins(:user).where(sql_query, query: "%#{params[:query]}%")
