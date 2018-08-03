@@ -20,8 +20,8 @@ User.all.each do |user|
   end
 end
 
-User.all.each do |u|
-  2.times do
-    Booking.create(date: Date.today, user_id: u.id, item_id: Item.all.sample.id)
-  end
-end
+# User.all.each do |u|
+#   2.times do
+#     Booking.create(date: Date.today, user_id: u.id, item_id: Item.all.sample.id)
+#   end
+# end
